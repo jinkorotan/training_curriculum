@@ -40,6 +40,7 @@ class CalendarsController < ApplicationController
           wday_num = wday_num -7
         # ↑配列wdaysから要素を取り出すときの添字が7以上にならないように工夫
       end
+
       days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num]}
 
       @week_days.push(days)
